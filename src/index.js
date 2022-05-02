@@ -12,7 +12,7 @@ import {
 const App = () => {
   return (
     <View style={styles.textContainer}>
-        <Text>Hello Tellwut User !</Text>
+        <Text style={styles.textStyle}>Hello Tellwut User !</Text>
     </View>
   )
 };
@@ -24,5 +24,8 @@ const styles = StyleSheet.create({
         flex: 1,
         alignSelf: 'center',
         justifyContent: 'center'
+    },
+    textStyle: {
+        fontFamily: 'Rubik-Italic'
     }
 });
