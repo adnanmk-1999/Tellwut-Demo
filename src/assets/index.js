@@ -2,9 +2,9 @@
  * All Screen Images
  */
 
-const images = {
+const Images = {
   iconCameraGrey: require('./images/iconCameraGrey/iconCameraGrey.png'),
   iconChangerole: require('./images/iconChangerole/iconChangerole.png')
 };
 
-export default images;
+export default Images;

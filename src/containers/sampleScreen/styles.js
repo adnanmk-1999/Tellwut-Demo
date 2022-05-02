@@ -14,7 +14,7 @@ export default styles = StyleSheet.create({
   },
   textContainer: {
     backgroundColor: colors.infoRedBackground,
-    width: scaleValueBasedOnWidth(167),
+    width: scaleValueBasedOnWidth(300),
     height: scaleValueBasedOnHeight(40),
     alignItems: 'center',
     justifyContent: 'center',
