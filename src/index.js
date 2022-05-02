@@ -9,6 +9,9 @@ import {
   View,
 } from 'react-native';
 
+
+import { colors } from './styles/basic';
+
 const App = () => {
   return (
     <View style={styles.textContainer}>
@@ -26,6 +29,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     },
     textStyle: {
-        fontFamily: 'Rubik-Italic'
+        fontFamily: 'Rubik-Regular',
+        color : colors.infoRed
     }
 });
