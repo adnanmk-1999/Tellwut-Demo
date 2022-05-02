@@ -1,35 +1,11 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-
-import { colors } from './styles/basic';
+import SampleScreen from './containers/sampleScreen';
 
 const App = () => {
   return (
-    <View style={styles.textContainer}>
-        <Text style={styles.textStyle}>Hello Tellwut User !</Text>
-    </View>
-  )
+    <SampleScreen />
+  );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-    textContainer: {
-        flex: 1,
-        alignSelf: 'center',
-        justifyContent: 'center'
-    },
-    textStyle: {
-        fontFamily: 'Rubik-Regular',
-        color : colors.infoRed
-    }
-});
