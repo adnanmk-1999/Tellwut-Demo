@@ -85,7 +85,6 @@ export default function LogIn() {
     <ScrollView style={styles.scrollviewContainer}>
       <SafeAreaView style={styles.container}>
         <View style={styles.bodyLogin}>
-          <Text>Log In</Text>
           <View styles={styles.loginFormContainer}>
             <EmailLoginForm
               placeholder={'Email'}
