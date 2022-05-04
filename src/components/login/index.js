@@ -1,12 +1,14 @@
 import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React from 'react';
 
-function EmailLoginForm({ text, onChangeText, value, errorCheck, isShownError, placeholder }) {
+import styles from './styles';
+
+function EmailLoginForm({ onChangeText, value, errorCheck, isShownError, placeholder }) {
   return (
     <View>
-      <Text>{text}</Text>
-      <View style={{backgroundColor: 'red'}}>
+      <View style={styles.formInputContainer}>
         <TextInput
+          style={styles.formInputField}
           onChangeText={onChangeText}
           value={value}
           placeholder={placeholder}
@@ -17,12 +19,16 @@ function EmailLoginForm({ text, onChangeText, value, errorCheck, isShownError, p
           }}
         />
       </View>
+
+      <Text style={styles.errorLabel}>
+      {isShownError == true ?
+        errorCheck
+       : null}</Text>
     </View>
   );
 };
 
 function PasswordLoginForm({
-  text,
   imageUrl,
   showPass,
   onPress,
@@ -37,15 +43,14 @@ function PasswordLoginForm({
 
   return (
     <View>
-      <Text >{text}</Text>
-      <View >
+      <View style={styles.formInputContainer}>
         <TextInput
+          style={styles.formInputField}
           maxLength={maxLength}
           minLength={minLength}
           placeholder={placeholder}
           onChangeText={onChangeText}
           value={value}
-          style={styles.password_text_input}
           returnKeyType="done"
           secureTextEntry={showPass}
           ref={input => {
@@ -55,14 +60,14 @@ function PasswordLoginForm({
 
         <TouchableOpacity
           activeOpacity={1}
-          style={styles.password_eye_icon}
+          style={styles.eyeIcon}
           onPress={onPress}>
           <Image source={imageUrl} />
         </TouchableOpacity>
       </View>
-      {isShownError == true ? (
-        <Text style={styles.error_label}>{errorCheck}</Text>
-      ) : null}
+      <Text style={styles.errorLabel}>
+        {isShownError == true ? errorCheck : null}
+      </Text>
     </View>
   );
 }
